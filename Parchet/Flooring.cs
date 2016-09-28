@@ -7,20 +7,20 @@ namespace Parchet
     public class Flooring
     {
         [TestMethod]
-        public void ParchetNecesar()
+        public void WoodNeededForFlooring()
         {
-            double totalParchet = CalculParchet(20, 10, 2, 1);
-            Assert.AreEqual(115, totalParchet);
+            double FlooringSurface = CalculateFlooring(20, 10, 2, 1);
+            Assert.AreEqual(115, FlooringSurface);
         }
 
-        double CalculParchet(double roomLungime, double roomLatime, double placaLungime, double placaLatime)
+        double CalculateFlooring(double roomLength, double roomWidth, double woodLength, double woodWidth)
         {
-            double suprafataPlaca = placaLungime * placaLatime;
-            double suprafataRoom = roomLungime * roomLatime;
+            double woodSurface = woodLength * woodWidth;
+            double roomSurface = roomLength * roomWidth;
 
-            double totalParchet = suprafataRoom / suprafataPlaca + ((suprafataRoom / suprafataPlaca) * 0.15);
+            double FlooringNeeded = roomSurface / woodSurface + ((roomSurface / woodSurface) * 0.15);
 
-            return totalParchet;
+            return FlooringNeeded;
         }
     }
 }
