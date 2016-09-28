@@ -9,17 +9,15 @@ namespace Mushrooms
         [TestMethod]
         public void ThreeTimeMoreRed()
         {
-            int redM = CalculateMushrooms(10, 3);
-            Assert.AreEqual(30, redM);
+            double redMushrooms = CalculateMushrooms(10, 3);
+            Assert.AreEqual(7.5, redMushrooms);
         }
 
-        int CalculateMushrooms(int whiteM, int moreThenRed)
+       double CalculateMushrooms(double totalMushrooms, double moreThenWhite)
         {
-            int totalM;
-            int red = whiteM * moreThenRed;
-            totalM = whiteM + red;
-            return red;
 
+           return moreThenWhite * totalMushrooms / (moreThenWhite + 1);
+          //  return Math.Round(redMushrooms,2);
 
         }
     }
