@@ -6,25 +6,25 @@ namespace GoatEatingHay
     [TestClass]
     public class GoatEatingHay
     {
+       
         [TestMethod]
-        public void TotalHayEatenByOneGoatInOneDay()
+        public void TotalHayEatenByTwentyGoatsInTenDays()
         {
-            int totalKgOfHayEaten = CalculateKgsOfHayEatenByGoat(1, 1, 10);
-            Assert.AreEqual(10, totalKgOfHayEaten);
+          double totalKgOfHayEaten = CalculateKgsOfHayEatenByGoat(12, 15, 18, 20, 10);
+            Assert.AreEqual(20, totalKgOfHayEaten);
         }
         [TestMethod]
-        public void TotalHayEatenBySevenGoatsInThereeDays()
+        double CalculateKgsOfHayEatenByGoat(double nrOfGoats, double nrOfDays, double kgOfHayAday, double otherGoats, double otherNrOfDays)
         {
-            int totalKgOfHayEaten = CalculateKgsOfHayEatenByGoat(7, 3, 10);
-            Assert.AreEqual(210, totalKgOfHayEaten);
-        }
-        [TestMethod]
-        int CalculateKgsOfHayEatenByGoat( int nrOfGoats, int nrOfDays, int kgOfHayAday)
-        {
-            
-            int totalKgOfHayEaten;
-            totalKgOfHayEaten = nrOfGoats * nrOfDays * kgOfHayAday;
-            return totalKgOfHayEaten;
+
+            double finalHay;
+            double tempHay;
+
+            tempHay = (otherNrOfDays * kgOfHayAday) / nrOfDays;
+
+            finalHay = (otherGoats * tempHay) / nrOfGoats;
+
+            return finalHay;
 
         }
     }
