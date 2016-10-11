@@ -12,6 +12,12 @@ namespace CalculateRent
             double rent = CalculateRentWithDelays(100, 1);
             Assert.AreEqual(102, rent);
         }
+        [TestMethod]
+        public void TwentyDaysDelay()
+        {
+            double rent = CalculateRentWithDelays(850, 20);
+            Assert.AreEqual(1700, rent);
+        }
         
         public  double CalculateRentWithDelays(double _rent, double lateDays)
 
