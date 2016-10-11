@@ -13,6 +13,13 @@ namespace WattermellonFriends
             Assert.AreEqual("DA", message);
 
         }
+        [TestMethod]
+        public void CalculateOddNumber()
+        {
+            string message = CalculateSplitWattermellon(13);
+            Assert.AreEqual("NU", message);
+
+        }
         public string CalculateSplitWattermellon(int kg)
         {
             int a = 0;
