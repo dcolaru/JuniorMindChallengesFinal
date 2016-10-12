@@ -7,9 +7,16 @@ namespace WattermellonFriends
     public class WattermellonFriends
     {
         [TestMethod]
-        public void CalculateEvenNumber()
+        public void EvenNumberNotEvanShares()
         {
            string message = CalculateSplitWattermellon(10);
+            Assert.AreEqual("DA", message);
+
+        }
+        [TestMethod]
+        public void EvenNumberAndEvanShares()
+        {
+            string message = CalculateSplitWattermellon(8);
             Assert.AreEqual("DA", message);
 
         }
@@ -22,23 +29,23 @@ namespace WattermellonFriends
         }
         public string CalculateSplitWattermellon(int kg)
         {
-            int a = 0;
-            int b = 0;
-            string message1 = "DA";
-            string message2 = "NU";
+           // int a = 0;
+            //int b = 0;
+            string [] message = { "DA", "NU" };
+           
             if (kg % 2 == 0)
             {
-                a = kg / 2;
+               int a = kg / 2;
                 if (a % 2 != 0)
                 {
-                    a = a + 1;
+                    a++;
                 }
-                b = kg - a;
-                return message1;
+                int b = kg - a;
+                return message[0];
             }
             else
 
-                return message2;
+                return message[1];
 
         }
     }
