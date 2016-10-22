@@ -16,6 +16,7 @@ namespace Mushrooms
        double CalculateMushrooms(double totalMushrooms, double moreThenWhite)
         {
 
+
            return moreThenWhite * totalMushrooms / (moreThenWhite + 1);
           //  return Math.Round(redMushrooms,2);
 
