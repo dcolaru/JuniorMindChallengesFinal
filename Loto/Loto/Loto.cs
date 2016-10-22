@@ -30,6 +30,7 @@ namespace Loto
             double oneChanceIn = CalculateCatIFortyNumbers(5);
             Assert.AreEqual(658008, oneChanceIn);
         }
+       
         double Factorial(double number)
         {
 
