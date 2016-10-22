@@ -4,13 +4,31 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Loto
 {
     [TestClass]
-    public class UnitTest1
+    public class Loto
     {
         [TestMethod]
         public void CatISixNumbers()
         {
-            double oneChancein = CalculateLoto(6);
-            Assert.AreEqual(13983816, oneChancein);
+            double oneChanceIn = CalculateLoto(6);
+            Assert.AreEqual(13983816, oneChanceIn);
+        }
+        [TestMethod]
+        public void CatIFiveNumbers()
+        {
+            double oneChanceIn = CalculateLoto(5);
+            Assert.AreEqual(1906884, oneChanceIn);
+        }
+        [TestMethod]
+        public void CatIFourNumbers()
+        {
+            double oneChanceIn = (double)CalculateLoto(5);
+            Assert.AreEqual(211876, oneChanceIn);
+        }
+        [TestMethod]
+        public void CatIFiveNumbersOutOfForty()
+        {
+            double oneChanceIn = CalculateCatIFortyNumbers(5);
+            Assert.AreEqual(658008, oneChanceIn);
         }
         double Factorial(double number)
         {
