@@ -12,6 +12,12 @@ namespace CountAnagrams
             double countAnagrams = CalculateAnagrams("dog");
             Assert.AreEqual(6, countAnagrams);
         }
+        [TestMethod]
+        public void ElevenLetterWord()
+        {
+            double countAnagrams = CalculateAnagrams("caterpillar");
+            Assert.AreEqual(39916800, countAnagrams);
+        }
 
         double Factorial(double number)
         {
