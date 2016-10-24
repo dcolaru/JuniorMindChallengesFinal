@@ -15,13 +15,12 @@ namespace Loto
         [TestMethod]
         public void CatIFiveNumbers()
         {
-            double oneChanceIn = CalculateLoto(5);
-            Assert.AreEqual(1906884, oneChanceIn);
+         Assert.AreEqual(1906884, CalculateLoto(5));
         }
         [TestMethod]
         public void CatIFourNumbers()
         {
-            double oneChanceIn = (double)CalculateLoto(5);
+            double oneChanceIn = CalculateLoto(4);
             Assert.AreEqual(211876, oneChanceIn);
         }
         [TestMethod]
