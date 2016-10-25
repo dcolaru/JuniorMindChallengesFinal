@@ -50,6 +50,7 @@ namespace Loto
             double chances = 0;
             double factorialMinus = totalBalls - numbers;
             chances = Factorial(totalBalls) / (Factorial(numbers) * Factorial(factorialMinus));
+            chances= Math.Round(chances);
             return chances;
         }
         
