@@ -11,7 +11,13 @@ namespace Excel
         {
             Assert.AreEqual("B", Excel(2));
         }
+        [TestMethod]
+        public void TwoLetters()
+        {
+            Assert.AreEqual("AA", Excel(27));
+        }
         
+
         string Excel(int number)
         {
 
