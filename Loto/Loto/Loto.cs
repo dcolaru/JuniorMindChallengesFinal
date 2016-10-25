@@ -3,30 +3,32 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Loto
 {
+    //one chace out of oneChanceIn
     [TestClass]
     public class Loto
     {
         [TestMethod]
         public void CatISixNumbers()
         {
-            double oneChanceIn = CalculateLoto(6);
+            double oneChanceIn = CalculateLoto(6,49);
             Assert.AreEqual(13983816, oneChanceIn);
         }
         [TestMethod]
         public void CatIFiveNumbers()
         {
-         Assert.AreEqual(1906884, CalculateLoto(5));
+           
+            Assert.AreEqual(1906884, CalculateLoto(5,49));
         }
         [TestMethod]
         public void CatIFourNumbers()
         {
-            double oneChanceIn = CalculateLoto(4);
+            double oneChanceIn = CalculateLoto(4,49);
             Assert.AreEqual(211876, oneChanceIn);
         }
         [TestMethod]
         public void CatIFiveNumbersOutOfForty()
         {
-            double oneChanceIn = CalculateCatIFortyNumbers(5);
+            double oneChanceIn = CalculateLoto(5,40);
             Assert.AreEqual(658008, oneChanceIn);
         }
        
@@ -41,23 +43,15 @@ namespace Loto
             }
             return factorial;
         }
-         double CalculateLoto(double numbers)
+         double CalculateLoto(double numbers, double totalBalls)
 
         {
-            double loto = 49;
+          
             double chances = 0;
-            double factorialMinus = loto - numbers;
-            chances = Factorial(loto) / (Factorial(numbers) * Factorial(factorialMinus));
+            double factorialMinus = totalBalls - numbers;
+            chances = Factorial(totalBalls) / (Factorial(numbers) * Factorial(factorialMinus));
             return chances;
         }
-        double CalculateCatIFortyNumbers(double numbers)
-
-        {
-            double loto = 40;
-            double chances = 0;
-            double factorialMinus = loto - numbers;
-            chances = Factorial(loto) / (Factorial(numbers) * Factorial(factorialMinus));
-            return chances;
-        }
+        
     }
 }

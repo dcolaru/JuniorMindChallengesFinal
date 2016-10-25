@@ -16,7 +16,7 @@ namespace Panagram
         [TestMethod]
         public void IsNotAPanagram()
         {
-            string word = getMissingLetters("The builder builds something");
+            string word = getMissingLetters("This will return false");
             Assert.AreEqual("false", word);
 
         }
